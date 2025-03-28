@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-29 00:01:34.912968",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_usge",
+  "student",
+  "column_break_aclz",
+  "status",
+  "recommended_courses",
+  "section_break_jrey",
+  "ai_suggestions"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_usge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student"
+  },
+  {
+   "fieldname": "recommended_courses",
+   "fieldtype": "Table",
+   "label": "Recommended Courses",
+   "options": "Study Plan Course"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "In Progress\nCompleted"
+  },
+  {
+   "fieldname": "column_break_aclz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jrey",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ai_suggestions",
+   "fieldtype": "Text",
+   "label": "AI Suggestions",
+   "options": "Program"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-29 00:38:06.264599",
+ "modified_by": "Administrator",
+ "module": "AI Mentorship for Completion of Degree",
+ "name": "Study Plan",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

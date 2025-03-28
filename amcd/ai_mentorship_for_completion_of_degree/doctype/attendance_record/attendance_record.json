@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-29 00:26:04.267578",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "course",
+  "total_classes",
+  "attended_classes",
+  "attendance_percentage"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student"
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "label": "Course",
+   "options": "Course"
+  },
+  {
+   "fieldname": "total_classes",
+   "fieldtype": "Link",
+   "label": "Total Classes",
+   "options": "Course"
+  },
+  {
+   "fieldname": "attended_classes",
+   "fieldtype": "Link",
+   "label": "Attended Classes",
+   "options": "Course"
+  },
+  {
+   "fieldname": "attendance_percentage",
+   "fieldtype": "Password",
+   "label": "Attendance Percentage"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-29 00:28:17.859753",
+ "modified_by": "Administrator",
+ "module": "AI Mentorship for Completion of Degree",
+ "name": "Attendance Record",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
