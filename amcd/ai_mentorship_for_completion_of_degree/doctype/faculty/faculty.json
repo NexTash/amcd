@@ -10,7 +10,6 @@
   "faculty_id",
   "full_name",
   "email",
-  "designation",
   "courses_taught"
  ],
  "fields": [
@@ -41,12 +40,6 @@
    "label": "Email"
   },
   {
-   "fieldname": "designation",
-   "fieldtype": "Link",
-   "label": "Designation",
-   "options": "Designation"
-  },
-  {
    "fieldname": "courses_taught",
    "fieldtype": "Table",
    "label": "Courses Taught",
@@ -55,7 +48,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-29 00:18:32.011673",
+ "modified": "2025-04-07 21:00:40.910045",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Faculty",

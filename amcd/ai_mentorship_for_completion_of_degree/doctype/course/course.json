@@ -40,7 +40,7 @@
    "fieldname": "semester",
    "fieldtype": "Link",
    "label": "Semester",
-   "options": "Faculty"
+   "options": "Smester"
   },
   {
    "fieldname": "credit_hours",
@@ -60,7 +60,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-29 00:36:21.384994",
+ "modified": "2025-04-07 21:18:43.748646",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Course",
