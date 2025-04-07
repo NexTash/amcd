@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CLO-CHECK-{MM}-{YYYY}-{####}",
+ "creation": "2025-04-08 00:44:53.646828",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "question_paper",
+  "paper_questions"
+ ],
+ "fields": [
+  {
+   "fieldname": "question_paper",
+   "fieldtype": "Attach",
+   "label": "Question Paper"
+  },
+  {
+   "fieldname": "paper_questions",
+   "fieldtype": "Table",
+   "label": "Paper Questions",
+   "options": "Paper Questions"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-08 00:48:24.018656",
+ "modified_by": "Administrator",
+ "module": "AI Mentorship for Completion of Degree",
+ "name": "CLO Check",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
