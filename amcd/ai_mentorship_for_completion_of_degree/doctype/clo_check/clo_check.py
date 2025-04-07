@@ -65,25 +65,23 @@ class CLOCheck(Document):
     def download_clo_file(self):
         questions = self.paper_questions or []
         
-        # Create a new docx document
         doc = DocxDocument()
 
-        # Add questions and CLO words to the document
         for row in questions:
             doc.add_paragraph(row.question or "")
+            
             if row.clo:
                 doc.add_paragraph(row.clo or "")
-        
-        # Save the document to a temporary file
+            else:
+                doc.add_paragraph("NO CLO Found")
+
         file_path = "/tmp/CLO_File.docx"
         doc.save(file_path)
 
-        # Upload the file to Frappe's file manager
         file_name = "CLO_File.docx"
         file_data = open(file_path, "rb").read()
         new_file = save_file(file_name, file_data, self.doctype, self.name)
 
-        # Optionally, delete the temporary file after saving to Frappe's file manager
         os.remove(file_path)
 
         return new_file
