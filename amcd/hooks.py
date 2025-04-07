@@ -138,9 +138,9 @@ app_license = "mit"
 # Hook on document methods and events
 
 doc_events = {
-	"User": {
-		"validate": "amcd.events.user.validate",
-	}
+	# "User": {
+	# 	"validate": "amcd.events.user.validate",
+	# }
 }
 
 # Scheduled Tasks
