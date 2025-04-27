@@ -1,132 +1,46 @@
-# Copyright (c) 2025, Nextash and contributors
+# Copyright (c) 2025, Umer and contributors
 # For license information, please see license.txt
 
 import frappe
 from datetime import datetime
 
 def execute(filters=None):
-    columns = get_columns(filters)
+    columns = get_columns()
     data = get_data(filters)
-    chart = get_chart(data)
-    return columns, data, None, chart
+    return columns, data, None
 
-def get_columns(filters):
-    columns = [
-        {
-            "label": "Student",
-            "fieldname": "student",
-            "fieldtype": "Data",
-            "width": 250
-        },
-        {
-            "label": "Student Id",
-            "fieldname": "student_id",
-            "fieldtype": "Data",
-            "width": 150
-        },
-        {
-            "label": "Session",
-            "fieldname": "session",
-            "fieldtype": "Data",
-            "width": 150
-        },
-        {
-            "label": "Assessment Marks",
-            "fieldname": "assessment_marks",
-            "fieldtype": "Data",
-            "width": 200
-        },
-        {
-            "label": "CLO",
-            "fieldname": "clo",
-            "fieldtype": "Data",
-            "width": 150
-        },
-        {
-            "label": "Assessment Type",
-            "fieldname": "assessment_type",
-            "fieldtype": "Data",
-            "width": 200
-        },
-        {
-            "label": "Subject",
-            "fieldname": "subject",
-            "fieldtype": "Data",
-            "width": 200
-        },
-        {
-            "label": "Status",
-            "fieldname": "status",
-            "fieldtype": "Data",
-            "width": 150
-        },
-        {
-            "label": "Obtain Marks",
-            "fieldname": "obtain_marks",
-            "fieldtype": "Data",
-            "width": 150
-        }
+def get_columns():
+    """Returns the columns for the report."""
+    return [
+        {"label": "Student", "fieldname": "student", "fieldtype": "Data", "width": 250},
+        {"label": "Roll Number", "fieldname": "roll_number", "fieldtype": "Data", "width": 150},
+        {"label": "Session", "fieldname": "session", "fieldtype": "Data", "width": 150},
+        {"label": "Subject", "fieldname": "subject", "fieldtype": "Data", "width": 200},
+        {"label": "Assessment Type", "fieldname": "assessment_type", "fieldtype": "Data", "width": 200},
+        {"label": "CLO", "fieldname": "clo", "fieldtype": "Data", "width": 150},
+        {"label": "Attainment Level", "fieldname": "attainment_level", "fieldtype": "Data", "width": 200},
+        {"label": "Obtain Marks", "fieldname": "obtain_marks", "fieldtype": "Data", "width": 150},
+        {"label": "Status", "fieldname": "status", "fieldtype": "Data", "width": 150},
     ]
-    return columns
 
 def get_data(filters):
-    data = []
-    result_filters = {}
+    """Fetches the data based on applied filters."""
+    filters_dict = {key: filters[key] for key in ['student', 'session', 'subject', 'assessment_type'] if filters.get(key)}
+    
+    # Fetch results from the 'Student Result Log' DocType
+    result_data = frappe.get_list('Student Result Log', filters=filters_dict, fields=["*"])
 
-    # Apply filters to the query if any
-    if filters.get('student'):
-        result_filters['student'] = filters.get('student')
-    if filters.get('session'):
-        result_filters['session'] = filters.get('session')
-    if filters.get('subject'):
-        result_filters['subject'] = filters.get('subject')
-    if filters.get('assessment_type'):
-        result_filters['assessment_type'] = filters.get('assessment_type')
-
-    # Fetch data from the Student Result Log DocType
-    result_data = frappe.get_list('Student Result Log', filters=result_filters, fields=["*"])
-
-    for result in result_data:
-        data.append({
-            "student": result.student,
-            "student_id": result.student_id,
+    return [
+        {
+            "student": frappe.get_value("Student", result.student, "student_name"),
+            "roll_number": result.student,
             "session": result.session,
-            "assessment_marks": result.assessment_marks,
-            "clo": result.clo,
-            "assessment_type": result.assessment_type,
             "subject": result.subject,
-            "status": result.status,
-            "obtain_marks": result.obtain_marks
-        })
-
-    return data
-
-def get_chart(data):
-    return {
-        "data": {
-            "labels": [d['subject'] for d in data],
-            "datasets": [{
-                "name": "Obtain Marks",
-                "values": [d['obtain_marks'] for d in data]
-            }]
-        },
-        "type": "bar",
-        "title": "Obtain Marks per Subject",
-        "height": 500,
-        "animate": True,
-        "axisOptions": {
-            "xAxis": {
-                "title": "Subjects",
-                "gridLines": {
-                    "display": True
-                }
-            },
-            "yAxis": {
-                "title": "Marks",
-                "gridLines": {
-                    "display": True
-                },
-                "scale": "linear"
-            }
+            "assessment_type": result.assessment_type,
+            "clo": result.clo,
+            "attainment_level": result.attainment_level,
+            "obtain_marks": result.obtain_marks,
+            "status": f"<span class='text-success'>CLO Achieved</span>" if result.is_achieved else f"<span class='text-danger'>CLO Not Achieved</span>",
         }
-    }
+        for result in result_data
+    ]

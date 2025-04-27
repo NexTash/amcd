@@ -1,4 +1,4 @@
-# Copyright (c) 2025, Nextash and Contributors
+# Copyright (c) 2025, Umer and contributors
 # See license.txt
 
 # import frappe

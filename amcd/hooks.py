@@ -1,8 +1,8 @@
 app_name = "amcd"
 app_title = "AI Mentorship for Completion of Degree"
-app_publisher = "Nextash"
+app_publisher = "Umer"
 app_description = "AI Mentorship for Completion of Degree"
-app_email = "support@nextash.com"
+app_email = "zumer8911@gmail.com"
 app_license = "mit"
 
 # Apps

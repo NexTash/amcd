@@ -1,4 +1,4 @@
-# Copyright (c) 2025, Nextash and contributors
+# Copyright (c) 2025, Umer and contributors
 # For license information, please see license.txt
 
 import frappe
@@ -9,15 +9,11 @@ class StudentResult(Document):
         for row in self.results:
             student_log = frappe.get_doc({
                 'doctype': 'Student Result Log',
-                'student': self.student, 
-                'student_id':self.student_roll_no,
-                'assessment_type': self.assessment_type,
+                'student_result': self.name,
                 'clo': row.clo,
-                'assessment_marks': row.assessment_marks,
-                'subject': row.subject,
+                'attainment_level': row.attainment_level,
                 'obtain_marks': row.obtain_marks,
-                'status': row.status or "pass",
-                'session': row.session
-                
-            })            
+                'is_achieved': row.is_achieved,
+            })
+
             student_log.insert()

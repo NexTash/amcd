@@ -1,31 +1,40 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{badge_year}-{session}",
+ "autoname": "format:{session_term}-{session_year}",
  "creation": "2025-04-27 01:16:07.644772",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "session_year",
-  "session_term"
+  "session_term",
+  "column_break_iieg",
+  "session_year"
  ],
  "fields": [
   {
    "fieldname": "session_term",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Session Term",
-   "options": "Summer\nWinter"
+   "options": "Spring\nFall",
+   "reqd": 1
   },
   {
    "fieldname": "session_year",
-   "fieldtype": "Data",
-   "label": "Session Year"
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Session Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iieg",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-27 01:34:05.369071",
+ "modified": "2025-04-27 22:18:02.083453",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Session",

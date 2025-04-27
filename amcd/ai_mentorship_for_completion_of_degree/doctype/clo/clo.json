@@ -19,6 +19,7 @@
   {
    "fieldname": "clo_words",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "CLO Words",
    "options": "CLO Words"
   }
@@ -26,7 +27,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-08 00:43:21.837436",
+ "modified": "2025-04-27 22:24:14.592156",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "CLO",
@@ -46,6 +47,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

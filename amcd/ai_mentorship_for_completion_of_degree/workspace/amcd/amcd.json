@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "AMCD",
  "links": [],
- "modified": "2025-04-08 01:57:28.333071",
+ "modified": "2025-04-27 22:10:33.235996",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "AMCD",
@@ -25,14 +25,6 @@
  "roles": [],
  "sequence_id": 28.0,
  "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Clo Check",
-   "link_to": "CLO Check",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
   {
    "color": "Grey",
    "doc_view": "List",

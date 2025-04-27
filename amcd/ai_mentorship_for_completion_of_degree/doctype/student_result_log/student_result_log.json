@@ -1,82 +1,119 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{student}-{session}",
+ "autoname": "hash",
  "creation": "2025-04-27 18:57:02.013869",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "student_result",
   "student",
-  "student_id",
-  "session",
-  "clo",
-  "assessment_marks",
-  "column_break_rbts",
-  "obtain_marks",
+  "roll_number",
+  "assessment",
   "assessment_type",
+  "session",
   "subject",
-  "status"
+  "column_break_rbts",
+  "clo",
+  "attainment_level",
+  "obtain_marks",
+  "is_achieved"
  ],
  "fields": [
   {
+   "fetch_from": "student_result.student",
    "fieldname": "student",
-   "fieldtype": "Data",
-   "label": "Student"
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student",
+   "read_only": 1
   },
   {
-   "fieldname": "student_id",
-   "fieldtype": "Data",
-   "label": "Student Id"
-  },
-  {
+   "fetch_from": "assessment.sesssion",
    "fieldname": "session",
-   "fieldtype": "Data",
-   "label": "Session"
-  },
-  {
-   "fieldname": "assessment_marks",
-   "fieldtype": "Data",
-   "label": "Assessment Marks"
+   "fieldtype": "Link",
+   "label": "Session",
+   "options": "Session",
+   "read_only": 1
   },
   {
    "fieldname": "clo",
-   "fieldtype": "Data",
-   "label": "CLO"
+   "fieldtype": "Link",
+   "label": "CLO",
+   "options": "CLO",
+   "read_only": 1
   },
   {
+   "fetch_from": "assessment.assessment_type",
    "fieldname": "assessment_type",
-   "fieldtype": "Data",
-   "label": "Assessment Type"
+   "fieldtype": "Link",
+   "label": "Assessment Type",
+   "options": "Assessment Type",
+   "read_only": 1
   },
   {
+   "fetch_from": "assessment.subject",
    "fieldname": "subject",
-   "fieldtype": "Data",
-   "label": "Subject"
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "Subject",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_rbts",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Data",
-   "label": "Status"
+   "fieldname": "obtain_marks",
+   "fieldtype": "Float",
+   "label": "Obtain Marks",
+   "read_only": 1
   },
   {
-   "fieldname": "obtain_marks",
+   "fetch_from": "student.roll_number",
+   "fieldname": "roll_number",
    "fieldtype": "Data",
-   "label": "Obtain Marks"
+   "label": "Roll Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student_result.assessment",
+   "fieldname": "assessment",
+   "fieldtype": "Link",
+   "label": "Assessment",
+   "options": "Assessment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attainment_level",
+   "fieldtype": "Float",
+   "label": "Attainment Level",
+   "read_only": 1
+  },
+  {
+   "fieldname": "student_result",
+   "fieldtype": "Link",
+   "label": "Student Result",
+   "options": "Student Result",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_achieved",
+   "fieldtype": "Check",
+   "label": "Is Achieved",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-27 19:28:06.391929",
+ "modified": "2025-04-27 23:14:51.462412",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Student Result Log",
- "naming_rule": "Expression",
+ "naming_rule": "Random",
  "owner": "Administrator",
  "permissions": [
   {

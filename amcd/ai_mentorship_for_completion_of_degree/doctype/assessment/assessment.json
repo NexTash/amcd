@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{sesssion}-{assessment_type}",
+ "autoname": "format:{sesssion}-{subject}-{assessment_type}-{#}",
  "creation": "2025-04-27 01:31:58.259220",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,26 +11,31 @@
   "column_break_xmdi",
   "assessment_type",
   "section_break_hjur",
-  "no_clo"
+  "no_clo",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "sesssion",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Sesssion",
-   "options": "Session"
+   "options": "Session",
+   "reqd": 1
   },
   {
    "fieldname": "assessment_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Assessment Type",
-   "options": "Assessment Type"
+   "options": "Assessment Type",
+   "reqd": 1
   },
   {
    "fieldname": "no_clo",
    "fieldtype": "Table",
    "ignore_user_permissions": 1,
-   "label": "NO Clo",
+   "label": "CLO's",
    "options": "Assessment CLO"
   },
   {
@@ -44,14 +49,27 @@
   {
    "fieldname": "subject",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Subject",
-   "options": "Subject"
+   "options": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Assessment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-04-27 02:03:06.199780",
+ "modified": "2025-04-27 22:28:10.244801",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Assessment",

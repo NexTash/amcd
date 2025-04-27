@@ -4,10 +4,12 @@
  "autoname": "hash",
  "creation": "2025-04-27 01:53:17.983364",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "clo",
-  "assessment_marks"
+  "column_break_glxt",
+  "attainment_level"
  ],
  "fields": [
   {
@@ -15,21 +17,24 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "CLO",
-   "options": "CLO Data"
+   "options": "CLO"
   },
   {
-   "fieldname": "assessment_marks",
-   "fieldtype": "Data",
+   "fieldname": "attainment_level",
+   "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Assessment Marks",
-   "options": "CLO Data"
+   "label": "Attainment Level"
+  },
+  {
+   "fieldname": "column_break_glxt",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-04-27 02:19:13.853496",
+ "modified": "2025-04-27 22:26:39.970315",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Assessment CLO",
