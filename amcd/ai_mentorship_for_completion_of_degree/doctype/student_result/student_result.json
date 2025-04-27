@@ -1,15 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:RS-{student}-{student_roll_no}",
  "creation": "2025-04-27 02:22:38.087127",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "student",
+  "student_roll_no",
   "column_break_zlgd",
   "assessment",
+  "assessment_type",
   "section_break_nuvs",
-  "results"
+  "results",
+  "amended_from"
  ],
  "fields": [
   {
@@ -37,15 +41,40 @@
   {
    "fieldname": "column_break_zlgd",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Student Result",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "student.roll_number",
+   "fieldname": "student_roll_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Student Roll No"
+  },
+  {
+   "fetch_from": "assessment.assessment_type",
+   "fieldname": "assessment_type",
+   "fieldtype": "Data",
+   "label": "Assessment Type"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-04-27 02:31:08.146646",
+ "modified": "2025-04-27 19:48:23.243844",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Student Result",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

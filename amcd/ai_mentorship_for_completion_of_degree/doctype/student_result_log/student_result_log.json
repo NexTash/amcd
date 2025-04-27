@@ -1,33 +1,32 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-04-27 02:23:53.697335",
+ "autoname": "format:{student}-{session}",
+ "creation": "2025-04-27 18:57:02.013869",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "student",
+  "student_id",
+  "session",
   "clo",
   "assessment_marks",
+  "column_break_rbts",
   "obtain_marks",
-  "status",
-  "column_break_qjos",
-  "subject",
   "assessment_type",
-  "session",
-  "passfail"
+  "subject",
+  "status"
  ],
  "fields": [
   {
-   "fieldname": "clo",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "CLO",
-   "options": "CLO Data"
+   "fieldname": "student",
+   "fieldtype": "Data",
+   "label": "Student"
   },
   {
-   "fieldname": "subject",
+   "fieldname": "student_id",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Subject"
+   "label": "Student Id"
   },
   {
    "fieldname": "session",
@@ -40,15 +39,9 @@
    "label": "Assessment Marks"
   },
   {
-   "default": "0",
-   "fieldname": "passfail",
-   "fieldtype": "Check",
-   "label": "PASS/FAil"
-  },
-  {
-   "fieldname": "status",
+   "fieldname": "clo",
    "fieldtype": "Data",
-   "label": "Status"
+   "label": "CLO"
   },
   {
    "fieldname": "assessment_type",
@@ -56,26 +49,49 @@
    "label": "Assessment Type"
   },
   {
-   "fieldname": "column_break_qjos",
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "column_break_rbts",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
   },
   {
    "fieldname": "obtain_marks",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Obtain Marks"
   }
  ],
  "grid_page_length": 50,
+ "in_create": 1,
  "index_web_pages_for_search": 1,
- "istable": 1,
  "links": [],
- "modified": "2025-04-27 19:24:56.180103",
+ "modified": "2025-04-27 19:28:06.391929",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
- "name": "Result",
+ "name": "Student Result Log",
+ "naming_rule": "Expression",
  "owner": "Administrator",
- "permissions": [],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
