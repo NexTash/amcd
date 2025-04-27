@@ -16,55 +16,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Master Data Management",
-   "link_count": 4,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Subject",
-   "link_count": 0,
-   "link_to": "Subject",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Session",
-   "link_count": 0,
-   "link_to": "Session",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Assessment Type",
-   "link_count": 0,
-   "link_to": "Assessment Type",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "CLO",
-   "link_count": 0,
-   "link_to": "CLO",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Result Management",
    "link_count": 2,
    "link_type": "DocType",
@@ -120,9 +71,68 @@
    "onboard": 0,
    "report_ref_doctype": "Student Result Log",
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master Data Management",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subject",
+   "link_count": 0,
+   "link_to": "Subject",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Session",
+   "link_count": 0,
+   "link_to": "Session",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assessment Type",
+   "link_count": 0,
+   "link_to": "Assessment Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CLO",
+   "link_count": 0,
+   "link_to": "CLO",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Student",
+   "link_count": 0,
+   "link_to": "Student",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-04-27 23:36:05.300180",
+ "modified": "2025-04-27 23:59:07.014375",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "AMCD",
