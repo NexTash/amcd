@@ -25,7 +25,7 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/amcd/css/amcd.css"
+app_include_css = "amcd.bundle.css"
 # app_include_js = "/assets/amcd/js/amcd.js"
 
 # include js, css files in header of web template

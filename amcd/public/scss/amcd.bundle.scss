@@ -1,0 +1,13 @@
+$hiddenItems: (
+    "Build",
+    "Tools",
+    "Integrations",
+    "Website",
+);
+
+@each $item in $hiddenItems {
+  .sidebar-item-container[item-name="#{$item}"],
+  .link_to_page.side-menu__link[data-title="#{$item}"] {
+    display: none !important;
+  }
+}
