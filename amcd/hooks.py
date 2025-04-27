@@ -137,11 +137,11 @@ app_include_css = "amcd.bundle.css"
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-	"User": {
-		"validate": "amcd.events.user.validate",
-	}
-}
+# doc_events = {
+# 	"User": {
+# 		"validate": "amcd.events.user.validate",
+# 	}
+# }
 
 # Scheduled Tasks
 # ---------------
