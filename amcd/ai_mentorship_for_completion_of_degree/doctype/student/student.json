@@ -6,9 +6,11 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "roll_number",
+  "student_name",
+  "section",
   "column_break_svkj",
-  "student_name"
+  "roll_number",
+  "semester"
  ],
  "fields": [
   {
@@ -29,12 +31,24 @@
   {
    "fieldname": "column_break_svkj",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "label": "Semester",
+   "options": "Semester"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-27 23:30:52.438037",
+ "modified": "2025-04-29 21:10:42.516851",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Student",

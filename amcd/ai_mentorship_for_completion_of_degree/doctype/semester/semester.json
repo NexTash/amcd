@@ -1,43 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{session_term}-{session_year}",
- "creation": "2025-04-27 01:16:07.644772",
+ "autoname": "format:{semester}",
+ "creation": "2025-04-29 21:00:27.834554",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "session_term",
-  "column_break_iieg",
-  "session_year"
+  "semester"
  ],
  "fields": [
   {
-   "fieldname": "session_term",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Session Term",
-   "options": "Spring\nFall",
-   "reqd": 1
-  },
-  {
-   "fieldname": "session_year",
+   "fieldname": "semester",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Session Year",
+   "label": "Semester",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_iieg",
-   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-27 22:18:02.083453",
+ "modified": "2025-04-29 21:01:22.349207",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
- "name": "Session",
+ "name": "Semester",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

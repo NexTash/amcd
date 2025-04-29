@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "sources": ["../../../../../../../../tmp/tmp-53514-d70iv0H1bHtz/amcd/amcd/public/scss/amcd.bundle.css"],
+  "sources": ["../../../../../../../../tmp/tmp-57486-f0cQzAvNkdNC/amcd/amcd/public/scss/amcd.bundle.css"],
   "sourcesContent": [".sidebar-item-container[item-name=Build],\n.link_to_page.side-menu__link[data-title=Build] {\n  display: none !important;\n}\n\n.sidebar-item-container[item-name=Tools],\n.link_to_page.side-menu__link[data-title=Tools] {\n  display: none !important;\n}\n\n.sidebar-item-container[item-name=Integrations],\n.link_to_page.side-menu__link[data-title=Integrations] {\n  display: none !important;\n}\n\n.sidebar-item-container[item-name=Website],\n.link_to_page.side-menu__link[data-title=Website] {\n  display: none !important;\n}"],
   "mappings": ";AAAA;AAAA;AAEE;AAAA;AAGF;AAAA;AAEE;AAAA;AAGF;AAAA;AAEE;AAAA;AAGF;AAAA;AAEE;AAAA;",
   "names": []

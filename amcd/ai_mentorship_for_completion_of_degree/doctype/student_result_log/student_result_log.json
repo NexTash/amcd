@@ -11,13 +11,15 @@
   "roll_number",
   "assessment",
   "assessment_type",
-  "session",
   "subject",
+  "section",
+  "semester",
   "column_break_rbts",
   "clo",
   "attainment_level",
   "obtain_marks",
-  "is_achieved"
+  "is_achieved",
+  "clo_status"
  ],
  "fields": [
   {
@@ -26,14 +28,6 @@
    "fieldtype": "Link",
    "label": "Student",
    "options": "Student",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "assessment.sesssion",
-   "fieldname": "session",
-   "fieldtype": "Link",
-   "label": "Session",
-   "options": "Session",
    "read_only": 1
   },
   {
@@ -101,7 +95,27 @@
    "default": "0",
    "fieldname": "is_achieved",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Is Achieved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "label": "Semester",
+   "options": "Semester"
+  },
+  {
+   "fieldname": "clo_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Clo Status",
    "read_only": 1
   }
  ],
@@ -109,7 +123,7 @@
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-27 23:14:51.462412",
+ "modified": "2025-04-29 23:01:29.154972",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Student Result Log",

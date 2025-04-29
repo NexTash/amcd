@@ -1,28 +1,24 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{sesssion}-{subject}-{assessment_type}-{#}",
+ "autoname": "format:{semester}{section}-{subject}-{assessment_type}-{#}",
  "creation": "2025-04-27 01:31:58.259220",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "subject",
-  "sesssion",
+  "semester",
   "column_break_xmdi",
   "assessment_type",
+  "section",
   "section_break_hjur",
   "no_clo",
-  "amended_from"
+  "amended_from",
+  "student_record_section",
+  "attach_file",
+  "assesment_result"
  ],
  "fields": [
-  {
-   "fieldname": "sesssion",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Sesssion",
-   "options": "Session",
-   "reqd": 1
-  },
   {
    "fieldname": "assessment_type",
    "fieldtype": "Link",
@@ -63,13 +59,44 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Section",
+   "reqd": 1
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "label": "Semester",
+   "options": "Semester",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_record_section",
+   "fieldtype": "Section Break",
+   "label": "Student Record"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "assesment_result",
+   "fieldtype": "Table",
+   "label": "Assesment Result",
+   "options": "Assesment Result"
+  },
+  {
+   "fieldname": "attach_file",
+   "fieldtype": "Attach",
+   "label": "Attach File"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-27 22:28:10.244801",
+ "modified": "2025-04-29 22:38:33.441322",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Assessment",
