@@ -36,19 +36,21 @@
    "fieldname": "semester",
    "fieldtype": "Link",
    "label": "Semester",
-   "options": "Semester"
+   "options": "Semester",
+   "reqd": 1
   },
   {
    "fieldname": "section",
    "fieldtype": "Link",
    "label": "Section",
-   "options": "Section"
+   "options": "Section",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-29 21:10:42.516851",
+ "modified": "2025-04-29 23:37:14.345233",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Student",
