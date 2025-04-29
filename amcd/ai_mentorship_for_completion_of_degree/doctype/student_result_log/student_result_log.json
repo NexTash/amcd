@@ -6,9 +6,9 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "student_result",
-  "student",
   "roll_number",
+  "student",
+  "student_result",
   "assessment",
   "assessment_type",
   "subject",
@@ -25,9 +25,8 @@
   {
    "fetch_from": "student_result.student",
    "fieldname": "student",
-   "fieldtype": "Link",
-   "label": "Student",
-   "options": "Student",
+   "fieldtype": "Data",
+   "label": "Student Name",
    "read_only": 1
   },
   {
@@ -66,8 +65,9 @@
   {
    "fetch_from": "student.roll_number",
    "fieldname": "roll_number",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Roll Number",
+   "options": "Student",
    "read_only": 1
   },
   {
@@ -123,7 +123,7 @@
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-29 23:01:29.154972",
+ "modified": "2025-04-29 23:59:34.311338",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "Student Result Log",

@@ -30,8 +30,8 @@ class Assessment(Document):
 				log = frappe.get_doc({
 					"doctype": "Student Result Log",
 					"student_result": self.name,
-					"student": result_row.roll_no,
-					"student_name": result_row.student_name,
+					"roll_number": result_row.roll_no,
+					"student": result_row.student_name,
 					"clo": clo_row.clo,
 					"attainment_level": clo_row.attainment_level,
 					"obtain_marks": result_row.marks or 0,
