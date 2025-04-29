@@ -1,6 +1,15 @@
 {
- "charts": [],
- "content": "[{\"id\":\"UMTrLoLhAH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">AMCD</span>\",\"col\":12}},{\"id\":\"i5z86UgLz-\",\"type\":\"card\",\"data\":{\"card_name\":\"Master Data Management\",\"col\":4}},{\"id\":\"U6k_PVf_Qe\",\"type\":\"card\",\"data\":{\"card_name\":\"Result Management\",\"col\":4}},{\"id\":\"MJ1RIHpynx\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "charts": [
+  {
+   "chart_name": "Student Result1",
+   "label": "Student Result1"
+  },
+  {
+   "chart_name": "Student Result",
+   "label": "Student Result"
+  }
+ ],
+ "content": "[{\"id\":\"UMTrLoLhAH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">AMCD</span>\",\"col\":12}},{\"id\":\"4Ny__y1djQ\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Student Result\",\"col\":12}},{\"id\":\"-2iSSpvxeP\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Student Result1\",\"col\":12}},{\"id\":\"i5z86UgLz-\",\"type\":\"card\",\"data\":{\"card_name\":\"Master Data Management\",\"col\":4}},{\"id\":\"U6k_PVf_Qe\",\"type\":\"card\",\"data\":{\"card_name\":\"Result Management\",\"col\":4}},{\"id\":\"MJ1RIHpynx\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
  "creation": "2025-04-07 12:58:36.703760",
  "custom_blocks": [],
  "docstatus": 0,
@@ -142,7 +151,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-04-29 21:06:30.732270",
+ "modified": "2025-04-29 23:28:34.806336",
  "modified_by": "Administrator",
  "module": "AI Mentorship for Completion of Degree",
  "name": "AMCD",
