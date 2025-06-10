@@ -1,6 +1,9 @@
 import frappe
 
 def validate(doc, method):
+    if frappe.flags.in_setup_wizard:
+        return
+    
     amcd_settings = frappe.get_single("AMCD Settings")
     organization_domain = amcd_settings.get("organization_domain")
     

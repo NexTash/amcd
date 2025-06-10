@@ -1,5 +1,5 @@
 app_name = "amcd"
-app_title = "AI Mentorship for Completion of Degree"
+app_title = "AMCD"
 app_publisher = "Umer"
 app_description = "AI Mentorship for Completion of Degree"
 app_email = "zumer8911@gmail.com"
@@ -137,11 +137,11 @@ app_include_css = "amcd.bundle.css"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"User": {
-# 		"validate": "amcd.events.user.validate",
-# 	}
-# }
+doc_events = {
+	"User": {
+		"validate": "amcd.events.user.validate",
+	}
+}
 
 # Scheduled Tasks
 # ---------------

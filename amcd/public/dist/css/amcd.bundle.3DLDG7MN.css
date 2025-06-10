@@ -1,0 +1,18 @@
+/* ../../../../../tmp/tmp-4469-g1k74BmShTKj/amcd/amcd/public/scss/amcd.bundle.css */
+.sidebar-item-container[item-name=Build],
+.link_to_page.side-menu__link[data-title=Build] {
+  display: none !important;
+}
+.sidebar-item-container[item-name=Tools],
+.link_to_page.side-menu__link[data-title=Tools] {
+  display: none !important;
+}
+.sidebar-item-container[item-name=Integrations],
+.link_to_page.side-menu__link[data-title=Integrations] {
+  display: none !important;
+}
+.sidebar-item-container[item-name=Website],
+.link_to_page.side-menu__link[data-title=Website] {
+  display: none !important;
+}
+/*# sourceMappingURL=amcd.bundle.3DLDG7MN.css.map */

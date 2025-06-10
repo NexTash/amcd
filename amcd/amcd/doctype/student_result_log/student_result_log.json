@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2025-04-27 18:57:02.013869",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "roll_number",
+  "student",
+  "student_result",
+  "assessment",
+  "assessment_type",
+  "subject",
+  "section",
+  "column_break_rbts",
+  "clo",
+  "attainment_level",
+  "obtain_marks",
+  "is_achieved"
+ ],
+ "fields": [
+  {
+   "fetch_from": "roll_number.student_name",
+   "fieldname": "student",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "clo",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CLO",
+   "options": "CLO",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "assessment.assessment_type",
+   "fieldname": "assessment_type",
+   "fieldtype": "Link",
+   "label": "Assessment Type",
+   "options": "Assessment Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "assessment.subject",
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Subject",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rbts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "obtain_marks",
+   "fieldtype": "Float",
+   "label": "Obtain Marks",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student.roll_number",
+   "fieldname": "roll_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Roll Number",
+   "options": "Student",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student_result.assessment",
+   "fieldname": "assessment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assessment",
+   "options": "Assessment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attainment_level",
+   "fieldtype": "Float",
+   "label": "Attainment Level",
+   "read_only": 1
+  },
+  {
+   "fieldname": "student_result",
+   "fieldtype": "Link",
+   "label": "Student Result",
+   "options": "Student Result",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_achieved",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Achieved",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "assessment.section",
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Section",
+   "options": "Section"
+  }
+ ],
+ "grid_page_length": 50,
+ "hide_toolbar": 1,
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-11 00:55:39.588321",
+ "modified_by": "Administrator",
+ "module": "AMCD",
+ "name": "Student Result Log",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
