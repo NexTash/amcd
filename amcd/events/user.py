@@ -1,7 +1,7 @@
 import frappe
 
 def validate(doc, method):
-    if frappe.flags.in_setup_wizard:
+    if frappe.flags.in_setup_wizard or doc.name == "Administrator":
         return
     
     amcd_settings = frappe.get_single("AMCD Settings")
