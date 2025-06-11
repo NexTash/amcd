@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:assessment_title",
  "creation": "2025-04-27 01:35:25.030920",
@@ -21,7 +22,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-27 22:19:02.117724",
+ "modified": "2025-06-11 01:31:11.757192",
  "modified_by": "Administrator",
  "module": "AMCD",
  "name": "Assessment Type",

@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "hash",
  "creation": "2025-04-27 18:57:02.013869",
@@ -116,7 +117,7 @@
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-11 00:55:39.588321",
+ "modified": "2025-06-11 01:31:10.599101",
  "modified_by": "Administrator",
  "module": "AMCD",
  "name": "Student Result Log",

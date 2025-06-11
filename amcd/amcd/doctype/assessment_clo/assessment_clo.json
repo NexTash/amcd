@@ -17,13 +17,15 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "CLO",
-   "options": "CLO"
+   "options": "CLO",
+   "reqd": 1
   },
   {
    "fieldname": "attainment_level",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Attainment Level"
+   "label": "Attainment Level",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_glxt",
@@ -34,7 +36,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-04-27 22:26:39.970315",
+ "modified": "2025-06-11 08:36:45.715827",
  "modified_by": "Administrator",
  "module": "AMCD",
  "name": "Assessment CLO",
