@@ -13,7 +13,8 @@ frappe.ui.form.on("Student Result", {
             'status': 'Enrolled'
           },
           fields: ["*"],
-          order_by: "student"
+          order_by: "student",
+          limit: 1000
         }).then(students => {
           students.forEach(student => {
             doc.no_clo.forEach(row => {
